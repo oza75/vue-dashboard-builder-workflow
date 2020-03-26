@@ -1,0 +1,3 @@
+[submodule "src/dashboard"]
+	path = src/dashboard
+	url = https://github.com/oza75/vue-dashboard-builder.git

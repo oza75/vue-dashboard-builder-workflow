@@ -1,29 +1,41 @@
 module.exports = {
   root: true,
   env: {
-    node: true,
+    node: true
   },
-  extends: [
+  'extends': [
     'plugin:vue/essential',
-    '@vue/airbnb',
-    '@vue/typescript/recommended',
+    '@vue/standard',
+    '@vue/typescript'
   ],
-  parserOptions: {
-    ecmaVersion: 2020,
-  },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'vue/script-indent': [
+      'error',
+      2,
+      { 'baseIndent': 1 }
+    ], 'semi': ['error', 'always']
+  },
+  parserOptions: {
+    parser: '@typescript-eslint/parser',
   },
   overrides: [
     {
       files: [
         '**/__tests__/*.{j,t}s?(x)',
-        '**/tests/unit/**/*.spec.{j,t}s?(x)',
+        '**/tests/unit/**/*.spec.{j,t}s?(x)'
       ],
       env: {
-        jest: true,
-      },
+        jest: true
+      }
     },
-  ],
-};
+    {
+      files: ['*.vue'],
+      rules: {
+        indent: 'off',
+        'no-tabs': 'off'
+      }
+    }
+  ]
+}
