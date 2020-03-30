@@ -1,4 +1,4 @@
-import { Entity, Action, Field, IdField } from "../dashboard/src";
+import { Entity, Action, Field, IdField } from '../dashboard/src';
 
 class Order extends Entity {
   queryUrl = '/orders';

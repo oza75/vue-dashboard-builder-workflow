@@ -1,8 +1,10 @@
 // @ts-ignore
+// import { Action, Entity, Field, IdField, TextField } from '@/dashboard/src';
 import { Action, Entity, Field, IdField, TextField } from 'vue-dashboard-builder';
 
 class UserEntity extends Entity {
   queryUrl: string = '/users';
+
   title: string = 'Utilisateurs';
   icon: string = 'fas fa-users';
   defaultKey: string = 'email';
